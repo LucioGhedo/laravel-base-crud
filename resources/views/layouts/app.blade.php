@@ -7,6 +7,10 @@
     <title>Document</title>
 </head>
 <body>
+    <header>
+        header
+    </header>
+
     @yield('main_content')
 </body>
 </html>
