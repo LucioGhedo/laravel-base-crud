@@ -5,7 +5,7 @@
 
     <form action="{{ route('comics.store') }}" method="POST">
         @csrf
-        
+
         <div>
             <label for="title">titolo</label>
             <input type="text" name="title" id="title">
@@ -33,7 +33,7 @@
         <br>
         <div>
             <label for="sale_date">prima pubblicazione</label>
-            <input type="text" name="sale_date" id="sale_date">
+            <input type="datetime-local" name="sale_date" id="sale_date">
         </div>
         <br>
         <div>
