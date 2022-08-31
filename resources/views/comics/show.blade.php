@@ -18,4 +18,10 @@
     <div>
         Tipo: {{$comic->type}}
     </div>
+    <form action="{{ route('comics.destroy', ['comic' => $comic->id]) }}" method="post">
+        @csrf
+        @method('DELETE')
+
+        <input type="submit" value="cancella elemento" onClick="return confirm('Sicuro?');">
+    </form>
 @endsection

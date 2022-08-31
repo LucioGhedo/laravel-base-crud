@@ -13,6 +13,15 @@
                 <div>
                     <a href="{{ route('comics.show', ['comic' => $comic->id]) }}">Comic Details</a>
                 </div>
+                <div>
+                    <a href="{{ route('comics.edit', ['comic' => $comic->id]) }}">Modifica prodotto</a>
+                </div>
+                <form action="{{ route('comics.destroy', ['comic' => $comic->id]) }}" method="post">
+                    @csrf
+                    @method('DELETE')
+            
+                    <input type="submit" value="cancella elemento" onClick="return confirm('Sicuro?');">
+                </form>
             </div>
             <br> <br>
         @endforeach
